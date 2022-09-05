@@ -10,4 +10,3 @@ zodiac_days = ((1, 20), (1, 29), (3, 21), (4, 21), (5, 21), (6, 22),
 zodiac_day = filter(lambda x: x <= (month, day), zodiac_days)
 print(zodiac_day)
 zodiac_len = len(list(zodiac_day))
-

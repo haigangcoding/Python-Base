@@ -1,14 +1,11 @@
-# coding = utf8
-# file4 = open('name.txt')
-# print(file4.readline())
-#
-# file5 = open('name.txt')
-# for line in file5.readlines():
-#     print(line)
-#     print('====')
 
 file6 = open('name.txt')
-
-print(file6.tell())
-file6.read(1)
-print(file6.tell())
+print('当前文件指针的位置 %s' % file6.tell())
+print('当前读取到了一个字符内容是 %s' % file6.read(1))
+print('当前文件指针的位置 %s' % file6.tell())
+file6.seek(5, 0)
+print('我们进行seek操作')
+print('当前文件指针的位置 %s' % file6.tell())
+print('当前读取到了一个字符内容是 %s' % file6.read(1))
+print('当前文件指针的位置 %s' % file6.tell())
+file6.close()

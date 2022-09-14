@@ -14,7 +14,6 @@
 
 # a = 123
 # a.append()
-
 try:
     a = open('name.txt')
 except Exception as e:

@@ -8,5 +8,4 @@
 # 取得参数的个数
 def howlong(first, *other):
     print(1 + len(other))
-
 howlong(123, 234, 456)

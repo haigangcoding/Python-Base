@@ -15,7 +15,7 @@ class Player():
         self.hp = hp
     # 定义一个方法
     def print_role(self):
-        print('%s: %s' %(self.name,self.hp))
+        print('%s: %s' % (self.name, self.hp))
 
 # 类的实例化
 user1 = Player('tom', 100)

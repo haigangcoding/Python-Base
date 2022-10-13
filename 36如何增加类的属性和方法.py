@@ -22,7 +22,7 @@ class Player():
 
 
 class Monster():
-    # ' 定义怪物类'
+    ' 定义怪物类 '
     pass
 
 

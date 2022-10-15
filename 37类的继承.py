@@ -1,13 +1,12 @@
 
-# ¶¨ÒåÒ»¸öÀà
 class Player():
     def __init__(self, name, hp, occu):
-        # ±äÁ¿±»³ÆÎªÊôĞÔ
+        # å˜é‡è¢«ç§°ä¸ºå±æ€§
         self.name = name
         self.hp = hp
         self.occu = occu
 
-        # ¶¨ÒåÒ»¸ö·½·¨
+        # å®šä¹‰ä¸€ä¸ªæ–¹æ³•
         def print_role(self):
             print('%s: %s %s' %(self.name, self.hp, self.occu))
 
@@ -22,15 +21,29 @@ class Player():
 
 
 class Monster():
-    # ¶¨Òå¹ÖÎïÀà
+    # å®šä¹‰æ€ªç‰©ç±»
+    def __init__(self, hp):
+        self.hp = hp
+    def run(self):
+        print('ç§»åŠ¨åˆ°æŸä¸ªä½ç½®')
+
+class Animals(Monster):
+    # å®šä¹‰æ€ªç‰©ç±»
     pass
 
+class Boss(Monster):
+    # Bossç±»æ€ªç‰©
+    pass
 
-# ÀàµÄÊµÀı»¯
-user1 = Player('tom', 100, 'war')
-user2 = Player('jerry', 90, 'master')
-user1.print_role()
-user2.print_role()
+a1 = Monster(200)
+print(a1.hp)
+print(a1.run())
 
-user1.updateName('wilson')
-user1.print_role()
+# # ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
+# user1 = Player('tom', 100, 'war')
+# user2 = Player('jerry', 90, 'master')
+# user1.print_role()
+# user2.print_role()
+#
+# user1.updateName('wilson')
+# user1.print_role()

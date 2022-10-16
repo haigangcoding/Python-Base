@@ -22,24 +22,40 @@ class Player():
 
 class Monster():
     # 定义怪物类
-    def __init__(self, hp):
+    def __init__(self, hp=100):
         self.hp = hp
     def run(self):
         print('移动到某个位置')
+def whoami(self):
+    print("我是怪物父类")
 
 class Animals(Monster):
     # 定义怪物类
-    pass
+    def __init__(self, hp=10):
+        super().__init__(hp)
 
 class Boss(Monster):
     # Boss类怪物
-    pass
+    def __init__(self, hp=1000):
+        super().__init__(hp)
+    def whoami(self):
+        print('我是怪物我怕谁')
 
 a1 = Monster(200)
 print(a1.hp)
 print(a1.run())
+a2 = Animals(1)
+print(a2.hp)
+print(a2.run())
 
-# # ���ʵ����
+a3 = Boss(800)
+a3.whoami()
+
+print(' a1的类型 %s' %type(a1))
+print( 'a2的类型 %s' %type(a2))
+print(' a3的类型 %s' %type(a3))
+
+
 # user1 = Player('tom', 100, 'war')
 # user2 = Player('jerry', 90, 'master')
 # user1.print_role()

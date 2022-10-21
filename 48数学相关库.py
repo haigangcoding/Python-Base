@@ -1,3 +1,4 @@
 import re
 import random
-random.randint
+print(random.randint(1, 5))
+print(random.choice(['aa', 'bb', 'cc']))

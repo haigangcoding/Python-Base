@@ -15,3 +15,11 @@ import numpy as np
 
 # 定义一个全为 0 的矩阵
 print(np.zeros((3, 5)))
+
+# 定义一个全为 1 的矩阵
+print(np.ones((4, 6)))
+
+# 矩阵弄成空值
+# numpy.empty()函数
+# 这个函数可以创建一个没有任何具体值的ndarray数组，是创建数组最快的方法
+print(np.empty((2, 3, 2)))

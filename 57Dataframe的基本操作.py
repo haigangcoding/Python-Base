@@ -38,10 +38,38 @@ data = {'city':['shanghai', 'shanghai', 'shanghai', 'beijing', 'beijing'],
 #
 # print(frame2)
 
-pop = {'beijing': {2008: 1.5, 2009: 2.0},
-       'shanghai': {2008: 2.0, 2009: 3.6}
-       },
-frame3 = DataFrame(pop)
-print(frame3.T)
+# pop = {'beijing': {2008: 1.5, 2009: 2.0},
+#        'shanghai': {2008: 2.0, 2009: 3.6}
+#        },
+# frame3 = DataFrame(pop)
+# print(frame3.T)
 
+obj4 = Series([4.5, 7.2, -5.3, 3.6], index=['b', 'd', 'c', 'a'])
 
+# 把 fill_value 空值变成零
+obj5 = obj4.reindex(['a', 'b', 'c', 'd', 'e'], fill_value=0)
+
+print(obj5)
+
+# 讲颜色 赋值到 3个索引当中
+obj6 = Series(['blue', 'purple', 'yellow'], index=[0, 2, 4])
+
+# reindex 讲索引进行重新制定
+# :采用ffill()函数沿索引轴填充缺失值
+print(obj6.reindex(range(6), method='ffill'))
+
+from numpy import nan as NA
+
+data = Series([1, NA, 2])
+
+data2 = DataFrame([[1, 6.5, 3], [1, NA, NA], [NA, NA, NA]])
+
+data2[4] = NA
+# axis删除一整列的参数
+print(data2)
+print(data2.dropna(axis=1, how='all'))
+
+# 将 NAN 替换为 0
+data2.fillna(0)
+print(data2.fillna(0, inplace=True))
+print(data2)

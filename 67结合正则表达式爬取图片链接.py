@@ -11,3 +11,4 @@ print(results)
 for results in results:
     url, name = results
     print(url, re.sub('\s', '', name))
+
